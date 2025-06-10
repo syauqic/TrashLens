@@ -43,7 +43,7 @@ const InputGambar = () => {
       formData.append("file", file);
 
       const response = await axios.post(
-        "https://3db1-34-125-67-133.ngrok-free.app/predict",
+        "https://syauqic-recycle-api.hf.space/predict",
         formData,
         {
           headers: {
