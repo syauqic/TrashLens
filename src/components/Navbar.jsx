@@ -40,14 +40,24 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="bg-green-200 shadow sticky top-0 z-50">
+    <nav className="bg-[#044936] shadow sticky top-0 z-50">
       <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-        <button onClick={scrollToTop} className="text-xl font-bold text-green-700">
-          TrashLens
+        <button 
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          className="flex items-center space-x-2 focus:outline-none"
+        >
+          <img 
+            src="/logotrashlens.png" 
+            alt="TrashLens Logo" 
+            className="h-8 w-auto" 
+          />
+          <span className="text-xl font-bold text-white">
+            TrashLens
+          </span>
         </button>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex space-x-6 text-sm font-medium text-gray-700 items-center">
+        <ul className="hidden md:flex space-x-6 text-sm font-medium text-white items-center">
           <li>
             <button onClick={scrollToTop} className="hover:text-green-600 transition">
               Home
