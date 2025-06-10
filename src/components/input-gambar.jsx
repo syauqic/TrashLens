@@ -43,7 +43,7 @@ const InputGambar = () => {
       formData.append("file", file);
 
       const response = await axios.post(
-        "https://syauqic-recycle-api.hf.space/predict",
+        "https://3db1-34-125-67-133.ngrok-free.app/predict",
         formData,
         {
           headers: {
@@ -285,19 +285,27 @@ const InputGambar = () => {
 
       {predictions.length > 0 && (
         <div className="mt-6 px-4">
-          <h2 className="text-2xl font-bold text-blue-800">
-            Hasil Deteksi
-          </h2>
+          <h2 className="text-2xl font-bold text-blue-800">Hasil Deteksi</h2>
           {predictions.map((item, index) => (
             <section
               key={index}
-              className="bg-[#f5f7ff] py-3 rounded-xl shadow mb-5"
+              className="bg-[#f5f7ff] py-5 px-6 rounded-xl shadow mb-8"
             >
-              <h3 className="text-2xl font-bold text-blue-800 mb-6">
-                {labelTranslations[item.label] || item.label} (
-                {item.confidence}%)
+              <h3 className="text-2xl font-bold text-blue-800 mb-2">
+                {labelTranslations[item.label] || item.label} ({item.confidence}
+                %)
               </h3>
 
+              {/* Pesan edukatif */}
+              {item.message && (
+                <div className="max-w-6xl mx-auto bg-white border border-blue-200 rounded-lg p-6 mb-6 shadow-sm">
+                  <p className="text-gray-800 text-justify whitespace-pre-line leading-relaxed">
+                    {item.message}
+                  </p>
+                </div>
+              )}
+
+              {/* Link video edukasi */}
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
                 {item.recycle_links.map((link, i) => (
                   <a
@@ -327,7 +335,7 @@ const InputGambar = () => {
                     <div className="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors duration-300" />
                     <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
                       <h4 className="text-white font-semibold text-sm truncate">
-                        {videoTitles[link] || "TikTok Video"}
+                        {videoTitles[link] || "Video Edukasi"}
                       </h4>
                       <p className="text-gray-300 text-xs mt-1 truncate">
                         Pelajari cara mengelola sampah dengan benar
