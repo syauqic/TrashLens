@@ -1,7 +1,7 @@
 // src/pages/QuizPage.jsx
 import React, { useState } from "react";
 import { useSearchParams, Link } from "react-router-dom";
-import { quizDataByLevel } from "../data/quizData";
+import { quizDataByLevel } from "../data/quizdata";
 import QuestionCard from "../components/QuestionCard";
 
 const QuizPage = () => {
