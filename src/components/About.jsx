@@ -7,23 +7,23 @@ export default function About() {
     <section className="text-center space-y-14 px-4 py-12">
       {/* News Section */}
       <div className="space-y-4">
-        <h2 className="text-2xl md:text-3xl font-bold text-blue-800">NEWS</h2>
-        <p className="text-sm md:text-base text-gray-600 max-w-xl mx-auto">
-          Getting started with kamiudahmudah is simple
-        </p>
+        {/* <h2 className="text-2xl md:text-3xl font-bold text-blue-800">Berita</h2> */}
+        <h2 className="text-sm md:text-base font-bold text-gray-600 max-w-xl mx-auto">
+        Jenis Jenis sampah
+        </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto mt-6">
           {[
             {
-              title: "Create an Account",
-              desc: "Sign up and get started with free access to academic tools.",
+              title: "Sampah Organik",
+              desc: "Merupakan sampah yang berasal dari bahan alami dan dapat terurai secara alami, seperti sisa makanan, daun kering, dan sayur-sayuran. Sampah ini bisa diolah menjadi kompos yang bermanfaat bagi tanaman.",
             },
             {
-              title: "Browse or Upload",
-              desc: "Search for academic materials or support the community with your uploads.",
+              title: "Sampah Anorganik",
+              desc: "Berasal dari bahan-bahan yang sulit terurai seperti plastik, kaca, logam, dan kaleng. Sampah ini dapat didaur ulang, namun membutuhkan waktu dan proses khusus.",
             },
             {
-              title: "Download & Study",
-              desc: "Download notes and study guides to prepare with better preparation.",
+              title: "Sampah B3 (Bahan Berbahaya dan Beracun)",
+              desc: "Jenis sampah ini mengandung zat berbahaya seperti baterai, pestisida, atau limbah rumah sakit. Penanganannya harus dilakukan secara khusus agar tidak membahayakan manusia dan lingkungan.",
             },
           ].map((item, index) => (
             <div
