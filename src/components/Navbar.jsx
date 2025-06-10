@@ -91,7 +91,7 @@ export default function Navbar() {
 
         {/* Mobile menu button */}
         <button
-          className="md:hidden text-gray-700"
+          className="md:hidden text-white"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -101,7 +101,7 @@ export default function Navbar() {
       {/* Mobile Menu Dropdown */}
       {isOpen && (
         <div className="md:hidden px-4 pb-4">
-          <ul className="flex flex-col space-y-2 text-sm font-medium text-gray-700">
+          <ul className="flex flex-col space-y-2 text-sm font-medium text-white">
             <li>
               <button
                 onClick={scrollToTop}
