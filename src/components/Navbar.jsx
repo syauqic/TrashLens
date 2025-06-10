@@ -1,29 +1,40 @@
 import React, { useState } from "react";
-import { Menu, X } from "lucide-react"; // pastikan sudah install: `npm install lucide-react`
+import { Menu, X } from "lucide-react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
-  // Function untuk smooth scroll ke section tertentu
   const scrollToSection = (sectionId) => {
-    if (sectionId === 'home') {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
+    if (location.pathname !== "/") {
+      navigate("/", { state: { scrollTo: sectionId } });
     } else {
       const element = document.getElementById(sectionId);
       if (element) {
-        const navbar = document.querySelector('nav');
+        const navbar = document.querySelector("nav");
         const navbarHeight = navbar ? navbar.offsetHeight : 0;
-        
         const elementPosition = element.offsetTop;
         const offsetPosition = elementPosition - navbarHeight - 20;
+
         window.scrollTo({
           top: offsetPosition,
-          behavior: 'smooth'
+          behavior: "smooth",
         });
       }
+    }
+    setIsOpen(false);
+  };
+
+  const scrollToTop = () => {
+    if (location.pathname !== "/") {
+      navigate("/", { state: { scrollToTop: true } });
+    } else {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
     }
     setIsOpen(false);
   };
@@ -31,30 +42,40 @@ export default function Navbar() {
   return (
     <nav className="bg-green-200 shadow sticky top-0 z-50">
       <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-        <h1 className="text-xl font-bold text-green-700">TrashLens</h1>
+        <button onClick={scrollToTop} className="text-xl font-bold text-green-700">
+          TrashLens
+        </button>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex space-x-6 text-sm font-medium text-gray-700">
+        <ul className="hidden md:flex space-x-6 text-sm font-medium text-gray-700 items-center">
           <li>
-            <button 
-              onClick={() => scrollToSection('home')}
-              className="hover:text-green-600 transition"
-            >
+            <button onClick={scrollToTop} className="hover:text-green-600 transition">
               Home
             </button>
           </li>
           <li>
-            <button 
-              onClick={() => scrollToSection('berita')}
+            <button
+              onClick={() => scrollToSection("berita")}
               className="hover:text-green-600 transition"
             >
               Berita
             </button>
           </li>
           <li>
-            <a href="#" className="hover:text-green-600 transition">
+            <button
+              onClick={() => scrollToSection("footer")}
+              className="hover:text-green-600 transition"
+            >
               Contact
-            </a>
+            </button>
+          </li>
+          <li>
+            <Link
+              to="/quiz"
+              className="text-white bg-green-600 px-4 py-2 rounded-lg hover:bg-green-700 transition"
+            >
+              Mulai Quiz
+            </Link>
           </li>
         </ul>
 
@@ -72,25 +93,37 @@ export default function Navbar() {
         <div className="md:hidden px-4 pb-4">
           <ul className="flex flex-col space-y-2 text-sm font-medium text-gray-700">
             <li>
-              <button 
-                onClick={() => scrollToSection('home')}
+              <button
+                onClick={scrollToTop}
                 className="hover:text-green-600 transition text-left"
               >
                 Home
               </button>
             </li>
             <li>
-              <button 
-                onClick={() => scrollToSection('berita')}
+              <button
+                onClick={() => scrollToSection("berita")}
                 className="hover:text-green-600 transition text-left"
               >
                 Berita
               </button>
             </li>
             <li>
-              <a href="#" className="hover:text-green-600 transition">
+              <button
+                onClick={() => scrollToSection("footer")}
+                className="hover:text-green-600 transition text-left"
+              >
                 Contact
-              </a>
+              </button>
+            </li>
+            <li>
+              <Link
+                to="/quiz"
+                onClick={() => setIsOpen(false)}
+                className="text-white bg-green-600 px-4 py-2 rounded-lg text-center hover:bg-green-700 transition"
+              >
+                Mulai Quiz
+              </Link>
             </li>
           </ul>
         </div>
