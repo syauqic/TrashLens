@@ -273,11 +273,10 @@ const InputGambar = () => {
         <div className="w-full md:w-1/2 text-left">
           <div className="border-l-4 border-pink-400 pl-6">
             <h3 className="text-xl font-semibold text-blue-800 mb-2">
-              Komunitas Edukasi
+              Deteksi Sampahmu
             </h3>
             <p className="text-gray-600 leading-relaxed text-sm">
-              Share your notes, assignments and study materials with fellow
-              students in just a few clicks.
+              Unggah foto sampah mu disini atau ambil foto secara langsung menggunakan kamera.
             </p>
           </div>
         </div>

@@ -3,7 +3,7 @@ import React from "react";
 export default function Hero() {
   return (
     <section className="w-full flex flex-col items-center text-center px-4 py-10">
-      <h2 className="text-2xl md:text-3xl font-bold text-blue-800">Berita</h2>
+      <h2 id="berita" className="text-2xl md:text-3xl font-bold text-blue-800">Berita</h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl w-full mx-auto mt-6">
         {[
@@ -13,11 +13,11 @@ export default function Hero() {
           },
           {
             title: "",
-            desc: "Pendidikan lingkungan yang dimulai sejak usia dini hingga dewasa sangat penting untuk menumbuhkan kesadaran dan tanggung jawab terhadap sampah. Dengan memahami jenis dan dampak sampah, masyarakat dapat",
+            desc: "Pendidikan lingkungan yang dimulai sejak usia dini hingga dewasa sangat penting untuk menumbuhkan kesadaran dan tanggung jawab terhadap sampah. Dengan memahami jenis dan dampak sampah, masyarakat dapat mengelola sampah dengan tepat.",
           },
           {
             title: "",
-            desc: "Pengelolaan sampah bukan hanya tanggung jawab pemerintah, melainkan juga merupakan bagian dari peran aktif setiap individu. Dengan memahami pentingnya menjaga kebersihan lingkungan dan mengelola sampah secara bijak, kita semua—baik anak-anak maupun orang dewasa—dapat menjadi agen perubahan menuju masa depan yang lebih bersih, sehat, dan berkelanjutan",
+            desc: "Pengelolaan sampah bukan hanya tanggung jawab pemerintah, melainkan juga merupakan bagian dari peran aktif setiap individu. Dengan memahami pentingnya menjaga kebersihan lingkungan dan mengelola sampah secara bijak, kita semua—baik anak-anak maupun orang dewasa—dapat menjadi agen perubahan menuju masa depan yang lebih bersih, sehat, dan berkelanjutan.",
           },
           // Tambahkan item lainnya di sini jika perlu
         ].map((item, index) => (

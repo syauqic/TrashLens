@@ -15,7 +15,7 @@ export default function Footer() {
               </li>
               <li>
                 <a href="#" className="hover:underline">
-                  About
+                  Berita
                 </a>
               </li>
               <li>
@@ -70,7 +70,7 @@ export default function Footer() {
         </div>
 
         <div className="text-center text-xs mt-10 border-t border-white/20 pt-4 opacity-80">
-          © 2025 Youware. All rights reserved.
+          © 2025 TrashLens. All Rights Reserved.
         </div>
       </div>
     </footer>

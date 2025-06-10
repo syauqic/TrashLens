@@ -5,7 +5,7 @@ import InputGambar from "./input-gambar";
 export default function About() {
   return (
     <section className="text-center space-y-14 px-4 py-12">
-      {/* News Section */}
+      {/* Berita Section */}
       <div className="space-y-4">
         {/* <h2 className="text-2xl md:text-3xl font-bold text-blue-800">Berita</h2> */}
         <h2 className="text-sm md:text-base font-bold text-gray-600 max-w-xl mx-auto">
@@ -54,7 +54,7 @@ export default function About() {
           CAPSTONE PROJECT
         </h2>
         <p className="text-sm md:text-base text-gray-600 max-w-md mx-auto">
-          Our platform is dedicated to the academic success of UMBD students.
+          Our platform is dedicated for learning purpose.
         </p>
       </div>
     </section>
