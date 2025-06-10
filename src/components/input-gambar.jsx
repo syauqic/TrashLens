@@ -175,16 +175,16 @@ const InputGambar = () => {
   };
 
   const labelTranslations = {
-    cardboard: "Kardus",
-    shoes: "Sepatu",
-    biological: "Organik",
-    glass: "Kaca",
-    metal: "Logam",
+    cardboard: "Sampah Kardus",
+    shoes: "Sampah Sepatu",
+    biological: "Sampah Organik",
+    glass: "Sampah Kaca",
+    metal: "Sampah Logam",
     trash: "Sampah Umum",
-    clothes: "Pakaian",
-    paper: "Kertas",
-    plastic: "Plastik",
-    battery: "Baterai",
+    clothes: "Sampah Pakaian",
+    paper: "Sampah Kertas",
+    plastic: "Sampah Plastik",
+    battery: "Sampah Baterai",
   };
 
   return (
@@ -276,7 +276,8 @@ const InputGambar = () => {
               Deteksi Sampahmu
             </h3>
             <p className="text-gray-600 leading-relaxed text-sm">
-              Unggah foto sampah mu disini atau ambil foto secara langsung menggunakan kamera.
+              Unggah foto sampah mu disini atau ambil foto secara langsung
+              menggunakan kamera.
             </p>
           </div>
         </div>
@@ -284,15 +285,18 @@ const InputGambar = () => {
 
       {predictions.length > 0 && (
         <div className="mt-6 px-4">
+          <h2 className="text-2xl font-bold text-blue-800">
+            Hasil Deteksi
+          </h2>
           {predictions.map((item, index) => (
             <section
               key={index}
-              className="bg-[#f5f7ff] py-12 rounded-xl shadow mb-10"
+              className="bg-[#f5f7ff] py-3 rounded-xl shadow mb-5"
             >
-              <h2 className="text-2xl font-bold text-blue-800 mb-6">
-                Hasil Deteksi '{labelTranslations[item.label] || item.label} (
-                {item.confidence}%)'
-              </h2>
+              <h3 className="text-2xl font-bold text-blue-800 mb-6">
+                {labelTranslations[item.label] || item.label} (
+                {item.confidence}%)
+              </h3>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
                 {item.recycle_links.map((link, i) => (
