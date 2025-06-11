@@ -33,15 +33,10 @@ export default function Navbar() {
     setIsOpen(false);
   };
 
-  const showQuizMenu = ["/quiz", "/select-level", "/artikel", "/video"].includes(location.pathname);
-
   // Tutup dropdown jika klik di luar
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (
-        dropdownRef.current &&
-        !dropdownRef.current.contains(event.target)
-      ) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
         setIsDropdownOpen(false);
       }
     };
@@ -73,41 +68,39 @@ export default function Navbar() {
             </button>
           </li>
           <li>
+            <button onClick={() => scrollToSection("InputGambar")} className="hover:text-green-600 transition">
+              TrashAi
+            </button>
+          </li>
+          <li>
             <button onClick={() => scrollToSection("footer")} className="hover:text-green-600 transition">
               Contact
             </button>
           </li>
 
-          {showQuizMenu ? (
-            <li className="relative" ref={dropdownRef}>
-              <button
-                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                className="flex items-center space-x-1 hover:text-green-600 transition"
-              >
-                <span>Materi</span>
-                <ChevronDown size={16} />
-              </button>
-              {isDropdownOpen && (
-                <ul className="absolute top-full mt-2 bg-green-800 text-white rounded-md py-2 w-40 z-50">
-                  <li>
-                    <Link to="/artikel" className="block px-4 py-2 hover:bg-green-700">Artikel</Link>
-                  </li>
-                  <li>
-                    <Link to="/video" className="block px-4 py-2 hover:bg-green-700">Video</Link>
-                  </li>
-                  <li>
-                    <Link to="/select-level" className="block px-4 py-2 hover:bg-green-700">Quiz</Link>
-                  </li>
-                </ul>
-              )}
-            </li>
-          ) : (
-            <li>
-              <Link to="/quiz" className="text-white hover:text-green-600 transition">
-                Edukasi
-              </Link>
-            </li>
-          )}
+          {/* Edukasi Dropdown */}
+          <li className="relative" ref={dropdownRef}>
+            <button
+              onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+              className="flex items-center space-x-1 hover:text-green-600 transition"
+            >
+              <span>Edukasi</span>
+              <ChevronDown size={16} />
+            </button>
+            {isDropdownOpen && (
+              <ul className="absolute top-full mt-2 bg-green-800 text-white rounded-md py-2 w-40 z-50">
+                <li>
+                  <Link to="/artikel" className="block px-4 py-2 hover:bg-green-700" onClick={() => setIsDropdownOpen(false)}>Artikel</Link>
+                </li>
+                <li>
+                  <Link to="/video" className="block px-4 py-2 hover:bg-green-700" onClick={() => setIsDropdownOpen(false)}>Video</Link>
+                </li>
+                <li>
+                  <Link to="/select-level" className="block px-4 py-2 hover:bg-green-700" onClick={() => setIsDropdownOpen(false)}>Quiz</Link>
+                </li>
+              </ul>
+            )}
+          </li>
         </ul>
 
         {/* Mobile Menu Button */}
@@ -139,35 +132,22 @@ export default function Navbar() {
               </button>
             </li>
 
-            {showQuizMenu ? (
-              <>
-                <li>
-                  <Link to="/artikel" onClick={() => setIsOpen(false)} className="hover:text-green-600 transition text-left">
-                    Artikel
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/video" onClick={() => setIsOpen(false)} className="hover:text-green-600 transition text-left">
-                    Video
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/select-level" onClick={() => setIsOpen(false)} className="hover:text-green-600 transition text-left">
-                    Quiz
-                  </Link>
-                </li>
-              </>
-            ) : (
-              <li>
-                <Link
-                  to="/quiz"
-                  onClick={() => setIsOpen(false)}
-                  className="text-white hover:text-green-600 transition text-left"
-                >
-                  Edukasi
-                </Link>
-              </li>
-            )}
+            <li className="pt-2 font-semibold text-white">Edukasi</li>
+            <li>
+              <Link to="/artikel" onClick={() => setIsOpen(false)} className="hover:text-green-600 transition text-left">
+                Artikel
+              </Link>
+            </li>
+            <li>
+              <Link to="/video" onClick={() => setIsOpen(false)} className="hover:text-green-600 transition text-left">
+                Video
+              </Link>
+            </li>
+            <li>
+              <Link to="/select-level" onClick={() => setIsOpen(false)} className="hover:text-green-600 transition text-left">
+                Quiz
+              </Link>
+            </li>
           </ul>
         </div>
       )}

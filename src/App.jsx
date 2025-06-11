@@ -10,6 +10,9 @@ import LevelSelectionPage from "./pages/LevelSelectionPage";
 import LeaderboardPage from "./pages/LeaderboardPage";
 import ArticlePage from "./pages/ArticlePage";
 import VideoPage from "./pages/VideoPage";
+import InputGambar from "./components/InputGambar";
+import HasilDeteksi from "./components/HasilDeteksi";
+import TestimoniSection from "./components/TestimoniSection";
 
 export default function App() {
   return (
@@ -29,9 +32,11 @@ export default function App() {
         <Route path="/leaderboard" element={<LeaderboardPage />} />
         <Route path="/artikel" element={<ArticlePage />} />
         <Route path="/video" element={<VideoPage />} />
+        <Route path="/" element={<InputGambar />} />
+        <Route path="/hasil" element={<HasilDeteksi />} />
         <Route path="*" element={<div className="p-4">Halaman tidak ditemukan</div>} />
       </Routes>
-
+      <TestimoniSection />
       <Footer />
     </Router>
   );
