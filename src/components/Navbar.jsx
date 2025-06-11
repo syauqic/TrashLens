@@ -82,7 +82,7 @@ export default function Navbar() {
           <li>
             <Link
               to="/quiz"
-              className="text-white bg-green-600 px-4 py-2 rounded-lg hover:bg-green-700 transition"
+              className="text-white  px-4 py-2 rounded-lg hover:text-green-600 transition"
             >
               Mulai Quiz
             </Link>
