@@ -1,4 +1,3 @@
-// src/App.jsx
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from './components/Navbar';
@@ -9,7 +8,8 @@ import Footer from './components/Footer';
 import QuizPage from "./pages/QuizPage";
 import LevelSelectionPage from "./pages/LevelSelectionPage";
 import LeaderboardPage from "./pages/LeaderboardPage";
-
+import ArticlePage from "./pages/ArticlePage";
+import VideoPage from "./pages/VideoPage";
 
 export default function App() {
   return (
@@ -18,22 +18,18 @@ export default function App() {
       <Side />
 
       <Routes>
-        {/* Halaman utama */}
         <Route path="/" element={
           <>
             <Hero />
             <About />
           </>
         } />
-
-        {/* Halaman pemilih level */}
         <Route path="/select-level" element={<LevelSelectionPage />} />
-
-        {/* Halaman kuis */}
         <Route path="/quiz" element={<QuizPage />} />
-
-        {/* Halaman leaderboard */}
         <Route path="/leaderboard" element={<LeaderboardPage />} />
+        <Route path="/artikel" element={<ArticlePage />} />
+        <Route path="/video" element={<VideoPage />} />
+        <Route path="*" element={<div className="p-4">Halaman tidak ditemukan</div>} />
       </Routes>
 
       <Footer />

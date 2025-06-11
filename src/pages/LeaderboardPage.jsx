@@ -2,11 +2,11 @@
 import React from "react";
 
 const dummyData = [
-  { name: "Ayu", score: 95 },
-  { name: "Budi", score: 87 },
-  { name: "Citra", score: 83 },
-  { name: "Deni", score: 76 },
-  { name: "Eka", score: 72 },
+  { name: "", score: 95 },
+  { name: "", score: 87 },
+  { name: "", score: 83 },
+  { name: "", score: 76 },
+  { name: "", score: 72 },
 ];
 
 const LeaderboardPage = () => {
