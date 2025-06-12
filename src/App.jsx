@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Side from './components/Side';
 import Hero from './components/Hero';
 import About from './components/About';
+import TrashAI from './components/TrashAI';
 import Footer from './components/Footer';
 import QuizPage from "./pages/QuizPage";
 import LevelSelectionPage from "./pages/LevelSelectionPage";
@@ -24,6 +25,7 @@ export default function App() {
         <Route path="/" element={
           <>
             <Hero />
+            <TrashAI />
             <About />
           </>
         } />
@@ -32,8 +34,8 @@ export default function App() {
         <Route path="/leaderboard" element={<LeaderboardPage />} />
         <Route path="/artikel" element={<ArticlePage />} />
         <Route path="/video" element={<VideoPage />} />
-        <Route path="/" element={<InputGambar />} />
-        <Route path="/hasil" element={<HasilDeteksi />} />
+        <Route path="/trashai" element={<InputGambar />} />
+        {/* <Route path="/hasil" element={<HasilDeteksi />} /> */}
         <Route path="*" element={<div className="p-4">Halaman tidak ditemukan</div>} />
       </Routes>
       <TestimoniSection />

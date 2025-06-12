@@ -51,29 +51,47 @@ export default function Navbar() {
           onClick={scrollToTop}
           className="flex items-center space-x-2 focus:outline-none"
         >
-          <img src="/logotrashlens.png" alt="TrashLens Logo" className="h-8 w-auto" />
+          <img
+            src="/logotrashlens.png"
+            alt="TrashLens Logo"
+            className="h-8 w-auto"
+          />
           <span className="text-xl font-bold text-white">TrashLens</span>
         </button>
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-6 text-sm font-medium text-white items-center">
           <li>
-            <button onClick={scrollToTop} className="hover:text-green-600 transition">
+            <button
+              onClick={scrollToTop}
+              className="hover:text-green-600 transition"
+            >
               Home
             </button>
           </li>
           <li>
-            <button onClick={() => scrollToSection("berita")} className="hover:text-green-600 transition">
+            <button
+              onClick={() => scrollToSection("berita")}
+              className="hover:text-green-600 transition"
+            >
               Berita
             </button>
           </li>
           <li>
-            <button onClick={() => scrollToSection("InputGambar")} className="hover:text-green-600 transition">
-              TrashAi
-            </button>
+            <Link to="/trashai" className="hover:text-green-600 transition">
+              <button
+                onClick={() => scrollToSection("InputGambar")}
+                className="hover:text-green-600 transition"
+              >
+                TrashAI
+              </button>
+            </Link>
           </li>
           <li>
-            <button onClick={() => scrollToSection("footer")} className="hover:text-green-600 transition">
+            <button
+              onClick={() => scrollToSection("footer")}
+              className="hover:text-green-600 transition"
+            >
               Contact
             </button>
           </li>
@@ -90,13 +108,31 @@ export default function Navbar() {
             {isDropdownOpen && (
               <ul className="absolute top-full mt-2 bg-green-800 text-white rounded-md py-2 w-40 z-50">
                 <li>
-                  <Link to="/artikel" className="block px-4 py-2 hover:bg-green-700" onClick={() => setIsDropdownOpen(false)}>Artikel</Link>
+                  <Link
+                    to="/artikel"
+                    className="block px-4 py-2 hover:bg-green-700"
+                    onClick={() => setIsDropdownOpen(false)}
+                  >
+                    Artikel
+                  </Link>
                 </li>
                 <li>
-                  <Link to="/video" className="block px-4 py-2 hover:bg-green-700" onClick={() => setIsDropdownOpen(false)}>Video</Link>
+                  <Link
+                    to="/video"
+                    className="block px-4 py-2 hover:bg-green-700"
+                    onClick={() => setIsDropdownOpen(false)}
+                  >
+                    Video
+                  </Link>
                 </li>
                 <li>
-                  <Link to="/select-level" className="block px-4 py-2 hover:bg-green-700" onClick={() => setIsDropdownOpen(false)}>Quiz</Link>
+                  <Link
+                    to="/select-level"
+                    className="block px-4 py-2 hover:bg-green-700"
+                    onClick={() => setIsDropdownOpen(false)}
+                  >
+                    Quiz
+                  </Link>
                 </li>
               </ul>
             )}
@@ -117,34 +153,55 @@ export default function Navbar() {
         <div className="md:hidden px-4 pb-4">
           <ul className="flex flex-col space-y-2 text-sm font-medium text-white">
             <li>
-              <button onClick={scrollToTop} className="hover:text-green-600 transition text-left">
+              <button
+                onClick={scrollToTop}
+                className="hover:text-green-600 transition text-left"
+              >
                 Home
               </button>
             </li>
             <li>
-              <button onClick={() => scrollToSection("berita")} className="hover:text-green-600 transition text-left">
+              <button
+                onClick={() => scrollToSection("berita")}
+                className="hover:text-green-600 transition text-left"
+              >
                 Berita
               </button>
             </li>
             <li>
-              <button onClick={() => scrollToSection("footer")} className="hover:text-green-600 transition text-left">
+              <button
+                onClick={() => scrollToSection("footer")}
+                className="hover:text-green-600 transition text-left"
+              >
                 Contact
               </button>
             </li>
 
             <li className="pt-2 font-semibold text-white">Edukasi</li>
             <li>
-              <Link to="/artikel" onClick={() => setIsOpen(false)} className="hover:text-green-600 transition text-left">
+              <Link
+                to="/artikel"
+                onClick={() => setIsOpen(false)}
+                className="hover:text-green-600 transition text-left"
+              >
                 Artikel
               </Link>
             </li>
             <li>
-              <Link to="/video" onClick={() => setIsOpen(false)} className="hover:text-green-600 transition text-left">
+              <Link
+                to="/video"
+                onClick={() => setIsOpen(false)}
+                className="hover:text-green-600 transition text-left"
+              >
                 Video
               </Link>
             </li>
             <li>
-              <Link to="/select-level" onClick={() => setIsOpen(false)} className="hover:text-green-600 transition text-left">
+              <Link
+                to="/select-level"
+                onClick={() => setIsOpen(false)}
+                className="hover:text-green-600 transition text-left"
+              >
                 Quiz
               </Link>
             </li>
