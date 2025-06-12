@@ -7,7 +7,7 @@ const testimonials = [
   {
     id: 1,
     image:
-      "https://img.freepik.com/free-photo/man-collecting-scattered-plastic-bottles-from-ground_1268-20054.jpg?w=800",
+      "https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg?ga=GA1.1.2011681857.1743259396&semt=ais_hybrid&w=740",
     name: "Andi",
     quote:
       "TrashLens bikin saya sadar pentingnya memilah sampah. Praktis dan edukatif!",
@@ -15,7 +15,7 @@ const testimonials = [
   {
     id: 2,
     image:
-      "https://img.freepik.com/free-photo/woman-planting-tree-forest_1150-11005.jpg?w=800",
+      "https://img.freepik.com/free-photo/lifestyle-people-emotions-casual-concept-confident-nice-smiling-asian-woman-cross-arms-chest-confident-ready-help-listening-coworkers-taking-part-conversation_1258-59335.jpg?ga=GA1.1.2011681857.1743259396&semt=ais_hybrid&w=740",
     name: "Lestari",
     quote:
       "Sekarang saya dan anak-anak belajar daur ulang bareng. Seru banget!",
@@ -23,7 +23,7 @@ const testimonials = [
   {
     id: 3,
     image:
-      "https://img.freepik.com/free-photo/portrait-volunteer-with-gloves-bag_23-2148765282.jpg?w=800",
+      "https://img.freepik.com/free-photo/smiling-pleased-asian-male-student-with-braces-showing-thumbs-up-recommend-product-service-with-excellent-quality-like-approve-idea-man-nod-approval-agree-with-person-white-background_1258-55402.jpg?ga=GA1.1.2011681857.1743259396&semt=ais_hybrid&w=740",
     name: "Budi",
     quote:
       "Fitur deteksi sampahnya keren. Cocok buat edukasi lingkungan di sekolah.",
@@ -31,7 +31,7 @@ const testimonials = [
   {
     id: 4,
     image:
-      "https://img.freepik.com/free-photo/group-volunteers-cleaning-up-park_23-2148787637.jpg?w=800",
+      "https://img.freepik.com/free-photo/you-got-this-join-us-smiling-assertive-woman-pointing-front-inviting-work-company-event-praising-good-job-well-done-gesture-standing-white-wall_176420-37967.jpg?ga=GA1.1.2011681857.1743259396&semt=ais_hybrid&w=740",
     name: "Siska",
     quote:
       "Dari TrashLens saya mulai gerakan bersih-bersih RT. Inspiratif banget!",
@@ -39,14 +39,14 @@ const testimonials = [
   {
     id: 5,
     image:
-      "https://img.freepik.com/free-photo/young-environmentalist-cleaning-forest_23-2148795296.jpg?w=800",
+      "https://img.freepik.com/free-photo/satisfied-handsome-guy-posing-against-white-wall_176420-32923.jpg?ga=GA1.1.2011681857.1743259396&semt=ais_hybrid&w=740",
     name: "Reza",
     quote: "Teknologinya keren! Cocok untuk generasi muda peduli lingkungan.",
   },
   {
     id: 6,
     image:
-      "https://img.freepik.com/free-photo/volunteer-gathering-trash-nature_23-2148881342.jpg?w=800",
+      "https://img.freepik.com/free-photo/happy-brunette-woman-with-short-hair-standing-confident-relaxed-pose-hands-jeans-pockets-smiling-pleased-studio_176420-41414.jpg?ga=GA1.1.2011681857.1743259396&semt=ais_hybrid&w=740",
     name: "Nina",
     quote: "Makin peduli sama sampah setelah lihat video edukatif TrashLens.",
   },
