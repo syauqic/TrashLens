@@ -121,13 +121,11 @@ export default function Navbar() {
             )}
           </li>
           <li>
-            <button
-              onClick={() => scrollToSection("berita")}
-              className="hover:text-green-600 transition"
-            >
+            <Link to="/berita" className="hover:text-green-600 transition">
               Berita
-            </button>
+            </Link>
           </li>
+
           <li>
             <button
               onClick={() => scrollToSection("footer")}
@@ -160,12 +158,9 @@ export default function Navbar() {
               </button>
             </li>
             <li>
-              <button
-                onClick={() => scrollToSection("berita")}
-                className="hover:text-green-600 transition text-left"
-              >
+              <Link to="/berita" className="hover:text-green-600 transition">
                 Berita
-              </button>
+              </Link>
             </li>
             <li>
               <button

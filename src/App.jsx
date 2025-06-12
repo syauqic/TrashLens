@@ -14,6 +14,8 @@ import VideoPage from "./pages/VideoPage";
 import InputGambar from "./components/InputGambar";
 import HasilDeteksi from "./components/HasilDeteksi";
 import TestimoniSection from "./components/TestimoniSection";
+import BeritaPage from "./components/Berita";
+
 
 export default function App() {
   return (
@@ -34,6 +36,7 @@ export default function App() {
         <Route path="/leaderboard" element={<LeaderboardPage />} />
         <Route path="/artikel" element={<ArticlePage />} />
         <Route path="/video" element={<VideoPage />} />
+        <Route path="/berita" element={<BeritaPage />} />
         <Route path="/trashai" element={<InputGambar />} />
         {/* <Route path="/hasil" element={<HasilDeteksi />} /> */}
         <Route path="*" element={<div className="p-4">Halaman tidak ditemukan</div>} />
