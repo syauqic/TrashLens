@@ -20,13 +20,13 @@ export default function App() {
     <Router>
       <Navbar />
       <Side />
-
       <Routes>
         <Route path="/" element={
           <>
             <Hero />
             <TrashAI />
             <About />
+            <TestimoniSection />
           </>
         } />
         <Route path="/select-level" element={<LevelSelectionPage />} />
@@ -38,7 +38,7 @@ export default function App() {
         {/* <Route path="/hasil" element={<HasilDeteksi />} /> */}
         <Route path="*" element={<div className="p-4">Halaman tidak ditemukan</div>} />
       </Routes>
-      <TestimoniSection />
+      {/* <TestimoniSection /> */}
       <Footer />
     </Router>
   );

@@ -70,14 +70,6 @@ export default function Navbar() {
             </button>
           </li>
           <li>
-            <button
-              onClick={() => scrollToSection("berita")}
-              className="hover:text-green-600 transition"
-            >
-              Berita
-            </button>
-          </li>
-          <li>
             <Link to="/trashai" className="hover:text-green-600 transition">
               <button
                 onClick={() => scrollToSection("InputGambar")}
@@ -87,15 +79,6 @@ export default function Navbar() {
               </button>
             </Link>
           </li>
-          <li>
-            <button
-              onClick={() => scrollToSection("footer")}
-              className="hover:text-green-600 transition"
-            >
-              Contact
-            </button>
-          </li>
-
           {/* Edukasi Dropdown */}
           <li className="relative" ref={dropdownRef}>
             <button
@@ -136,6 +119,22 @@ export default function Navbar() {
                 </li>
               </ul>
             )}
+          </li>
+          <li>
+            <button
+              onClick={() => scrollToSection("berita")}
+              className="hover:text-green-600 transition"
+            >
+              Berita
+            </button>
+          </li>
+          <li>
+            <button
+              onClick={() => scrollToSection("footer")}
+              className="hover:text-green-600 transition"
+            >
+              Contact
+            </button>
           </li>
         </ul>
 

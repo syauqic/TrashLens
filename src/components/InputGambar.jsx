@@ -195,7 +195,6 @@
 
 import React, { useState, useRef, useEffect } from "react";
 import { Camera, Paperclip } from "lucide-react";
-// import axios from "axios";
 import axios from "axios";
 
 const InputGambar = () => {
@@ -467,7 +466,7 @@ const InputGambar = () => {
 
         <div className="w-full md:w-1/2 text-left">
           <div className="border-l-4 border-pink-400 pl-6">
-            <h3 className="text-xl font-semibold text-blue-800 mb-2">
+            <h3 className="text-xl font-semibold text-green-700 mb-2">
               Deteksi Sampahmu
             </h3>
             <p className="text-gray-600 leading-relaxed text-sm">
@@ -486,11 +485,11 @@ const InputGambar = () => {
               className="bg-[#f5f7ff] py-12 rounded-xl shadow mb-10"
             >
               <div className="w-full max-w-6xl mx-auto">
-                <h2 className="text-2xl font-bold text-blue-800 mb-6">
+                <h2 className="text-2xl font-bold text-green-700 mb-1 text-center">
                   Hasil Deteksi
                 </h2>
 
-                <h3 className="text-2xl font-bold text-blue-800 mb-2">
+                <h3 className="text-2xl font-bold text-green-700 mb-2 text-center">
                   {labelTranslations[item.label] || item.label} (
                   {item.confidence}
                   %)
