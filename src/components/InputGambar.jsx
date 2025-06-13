@@ -237,7 +237,7 @@ const InputGambar = () => {
       formData.append("file", file);
 
       const response = await axios.post(
-        "https://syauqic-recycle-api.hf.space/predict",
+        "https://syauqic-recycle-api-2.hf.space/predict",
         formData,
         {
           headers: {
@@ -489,9 +489,7 @@ const InputGambar = () => {
             >
               <div className="w-full max-w-6xl mx-auto">
                 <h3 className="text-2xl font-bold text-green-700 mb-2 text-center">
-                  {labelTranslations[item.label] || item.label} (
-                  {item.confidence}
-                  %)
+                  {labelTranslations[item.label] || item.label}
                 </h3>
 
                 {item.message && (

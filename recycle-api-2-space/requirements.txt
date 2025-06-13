@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+pillow
+# Ganti tensorflow dengan tensorflow-cpu untuk deployment CPU
+tensorflow-cpu
+gdown
+numpy
+python-multipart
+huggingface_hub

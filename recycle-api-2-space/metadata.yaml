@@ -1,0 +1,29 @@
+description: Ultralytics YOLOv8n-cls model trained on /content/dataset/balanced_dataset
+author: Ultralytics
+date: '2025-06-13T04:13:57.953722'
+version: 8.3.154
+license: AGPL-3.0 License (https://ultralytics.com/license)
+docs: https://docs.ultralytics.com
+stride: 1
+task: classify
+batch: 1
+imgsz:
+- 224
+- 224
+names:
+  0: battery
+  1: biological
+  2: cardboard
+  3: clothes
+  4: glass
+  5: metal
+  6: paper
+  7: plastic
+  8: shoes
+  9: trash
+args:
+  batch: 1
+  half: false
+  int8: false
+  nms: false
+channels: 3
