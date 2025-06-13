@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+pillow
+torch
+ultralytics
+gdown
+pyngrok
+nest_asyncio
