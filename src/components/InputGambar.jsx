@@ -479,16 +479,15 @@ const InputGambar = () => {
 
       {predictions.length > 0 && (
         <div className="mt-6 px-4">
+          <h2 className="text-2xl font-bold text-green-700 text-center">
+            Hasil Deteksi
+          </h2>
           {predictions.map((item, index) => (
             <section
               key={index}
-              className="bg-[#f5f7ff] py-12 rounded-xl shadow mb-10"
+              className="bg-[#f5f7ff] py-5 rounded-xl shadow mb-5"
             >
               <div className="w-full max-w-6xl mx-auto">
-                <h2 className="text-2xl font-bold text-green-700 mb-1 text-center">
-                  Hasil Deteksi
-                </h2>
-
                 <h3 className="text-2xl font-bold text-green-700 mb-2 text-center">
                   {labelTranslations[item.label] || item.label} (
                   {item.confidence}
