@@ -294,7 +294,7 @@ const InputGambar = () => {
             >
               <div className="w-full max-w-6xl mx-auto">
                 <h3 className="text-2xl font-bold text-green-700 mb-2 text-center">
-                  {labelTranslations[item.label] || item.label}
+                  {labelTranslations[item.label] || item.label || item.confidence}
                 </h3>
 
                 {item.message && (
