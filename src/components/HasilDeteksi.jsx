@@ -48,6 +48,7 @@ const HasilDeteksi = () => {
                     <h3 className="text-2xl font-bold text-blue-800 mb-2">
                         {labelTranslations[item.label] || item.label} ({item.confidence}%)
                     </h3>
+                    <h1>testin</h1>
 
                     {item.message && (
                         <div className="bg-white border border-blue-200 rounded-lg p-6 mb-6 shadow-sm">
